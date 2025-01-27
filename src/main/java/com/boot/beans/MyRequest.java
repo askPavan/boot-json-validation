@@ -1,8 +1,9 @@
 package com.boot.beans;
 
 
-import com.boot.custom.MyEnumDeserializer;
+import com.boot.custom.deserailizers.MyEnumDeserializer;
 import com.boot.custom.ValidateEnum;
+import com.boot.custom.deserailizers.StatusEnumDeserializer;
 import com.boot.enums.MyEnum;
 import com.boot.enums.StatusEnum;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -27,7 +28,7 @@ public class MyRequest {
 
     @NotNull(message = "Status value must not be null")
     @ValidateEnum(enumClass = StatusEnum.class, message = "Invalid status value")
-    @JsonDeserialize(using = MyEnumDeserializer.class)
+    @JsonDeserialize(using = StatusEnumDeserializer.class)
     private StatusEnum statusEnum;
 
 }
