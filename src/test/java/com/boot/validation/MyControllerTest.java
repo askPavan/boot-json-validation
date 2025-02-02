@@ -19,7 +19,7 @@ public class MyControllerTest {
 
     @Test
     public void testValidateRequest() throws Exception {
-        String json = "{\"myEnum\":\"VALUE1\",\"statusEnum\":\"ACTIVE\",\"name\":\"John\",\"address\":{\"state\":\"NY\"},\"age\":25}";
+        String json = "{\"myEnum\":\"VALUE1\",\"statusEnum\":\"ACTIVE\",\"name\":\"John\",\"address\":{\"state\":\"NY\"}}";
 
         mockMvc.perform(post("/api/validate")
                         .contentType(MediaType.APPLICATION_JSON)
