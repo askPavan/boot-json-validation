@@ -22,8 +22,8 @@ public class MyControllerTest {
         String json = "{\"myEnum\":\"VALUE1\",\"statusEnum\":\"ACTIVE\",\"name\":\"John\",\"address\":{\"state\":\"NY\"},\"age\":25}";
 
         mockMvc.perform(post("/api/validate")
-                        .contentType(MediaType.APPLICATION_JSON)  // Ensure content type is set
-                        .content(json))  // Set the request body content
-                .andExpect(status().isOk());  // Assert the status is OK (200)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andExpect(status().isOk());
     }
 }
